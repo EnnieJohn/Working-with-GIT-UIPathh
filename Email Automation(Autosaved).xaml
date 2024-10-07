@@ -1,0 +1,352 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Email_Automation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1100,4852" sap2010:WorkflowViewState.IdRef="Email_Automation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Email_Automation" sap:VirtualizedContainerService.HintSize="1110.4,4787.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Inbox - Enoobong.Akpan@dufil.com - Outlook" sap:VirtualizedContainerService.HintSize="1048,4345.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0e4dd32c-ca70-4484-abdb-81c53067948e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,4022.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Couldn't verify'" sap:VirtualizedContainerService.HintSize="952,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="0e4dd32c-ca70-4484-abdb-81c53067948e" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e4dd32c-ca70-4484-abdb-81c53067948e" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1011, 1, 44, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="db616ef8-718f-4363-b6c6-ac99532f3ea8" InformativeScreenshot="45ae7be980b1236f4400c181e2b9c5ac.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='NUIDialog' title='Couldn&amp;apos;t verify subscription' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 1063, 678" DesignTimeScaleFactor="1.25" FriendlyName="'Couldn't verify'" Guid="5a45a237-fa21-4626-a56f-a0aa49705874" InformativeScreenshot="d5184a2e532375122488f79b70fe1cdd.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='NUIDialog' title='Couldn&amp;apos;t verify subscription' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.FuzzySelectorArgument>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </uix:TargetAnchorable.FuzzySelectorArgument>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'METERED NETWORK'" sap:VirtualizedContainerService.HintSize="952,523.2" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="0e4dd32c-ca70-4484-abdb-81c53067948e" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Connect Anyway'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e4dd32c-ca70-4484-abdb-81c53067948e" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="1127, 172, 133, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Connect Anyway'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Business Bar toolbar' /&gt;&lt;uia cls='NetUIElement' name='METERED NETWORK WARNING' /&gt;&lt;uia cls='NetUISimpleButton' name='Connect Anyway' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Business Bar toolbar' /&gt;&lt;uia cls='NetUIElement' name='METERED NETWORK WARNING' /&gt;&lt;uia cls='NetUISimpleButton' name='Connect Anyway' role='Button' automationid='' check:fulltext='Connect Anyway' /&gt;" Guid="3a5ec861-965e-491c-aba5-86d8dfc6bc72" InformativeScreenshot="00eced4e6b2e2d8c3cd741ad434607d4.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - Enoobong.Akpan@dufil.com - Outlook' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="79, 169, 1840, 38" DesignTimeScaleFactor="1.25" ElementType="Container" FriendlyName="'METERED NETWORK'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Business Bar toolbar' /&gt;&lt;uia cls='NetUIElement' name='METERED NETWORK WARNING' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Business Bar toolbar' /&gt;&lt;uia cls='NetUIElement' name='METERED NETWORK WARNING' role='Group' automationid='' check:fulltext='METERED NETWORK WARNING&amp;#x9;We noticed the metered connection you&amp;apos;re on may charge extra. Outlook is' /&gt;" Guid="31e15b4d-a706-4077-84a3-74ba144ef0b3" InformativeScreenshot="71124b30f11f57f8fab9ba76f19ea42d.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - Enoobong.Akpan@dufil.com - Outlook' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <umab:OutlookApplicationCard Account="Enoobong.Akpan@dufil.com" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="952,2885.6" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+              <umab:OutlookApplicationCard.Body>
+                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,2676" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'File Tab'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="e300cf36-8c38-42e9-8c95-32fa5b9d58c7" CvTextArea="94, 79, 27, 17" CvTextArgument="File" CvType="Text" DesignTimeRectangle="74, 69, 68, 38" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'File Tab'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia automationid='FileTabButton' cls='NetUIRibbonTab' name='File Tab' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Ribbon toolbar' /&gt;&lt;uia automationid='FileTabButton' cls='NetUIRibbonTab' name='File Tab' role='Button' check:fulltext='File Tab' /&gt;" Guid="890c296c-c32e-43d1-8f20-2078fb7009d2" InformativeScreenshot="398cc133765fe7ddfa6a7af643c81c91.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='AI Camera Alert - Enoobong.Akpan@dufil.com - Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open &amp; Export'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="d6eea4a0-412a-4286-b248-959e343df1ef" CvTextArea="61, 192, 103, 17" CvTextArgument="Open &amp; Export" CvType="Text" DesignTimeRectangle="9, 175, 185, 50" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'Open &amp; Export'" FullSelectorArgument="&lt;uia automationid='NavBarMenu' cls='NetUIKeyboardTabElement' name='File' /&gt;&lt;uia cls='NetUIRibbonTab' name='Open &amp;amp; Export' /&gt;" FuzzySelectorArgument="&lt;uia automationid='NavBarMenu' cls='NetUIKeyboardTabElement' name='File' /&gt;&lt;uia cls='NetUIRibbonTab' name='Open &amp;amp; Export' role='List Item' automationid='' check:fulltext='Open &amp;amp; Export' /&gt;" Guid="ca36d076-b1f8-440d-b884-5be966d2c080" InformativeScreenshot="2f4dc7e88522f09d23dc01da64caf7c6.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='AI Camera Alert - Enoobong.Akpan@dufil.com - Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Import/Export'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="b0950556-5eed-4fe6-846c-95c06d829f47" CvTextArea="261, 457, 100, 17" CvTextArgument="Import/Export" CvType="Text" DesignTimeRectangle="250, 390, 124, 107" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Import/Export'" FullSelectorArgument="&lt;uia cls='NetUIElement' name='Open &amp;amp; Export' /&gt;&lt;uia automationid='ImportExportGroup' cls='NetUISlabContainer' name='Import/Export' /&gt;&lt;uia cls='NetUISimpleButton' name='Import/Export' /&gt;" FuzzySelectorArgument="&lt;uia cls='NetUIElement' name='Open &amp;amp; Export' /&gt;&lt;uia automationid='ImportExportGroup' cls='NetUISlabContainer' name='Import/Export' /&gt;&lt;uia cls='NetUISimpleButton' name='Import/Export' role='Button' automationid='' check:fulltext='Import/Export' /&gt;" Guid="861766ed-562f-451c-9251-ffcd6c9595fd" InformativeScreenshot="12e6a245e953476b66a5af822d876c7e.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='AI Camera Alert - Enoobong.Akpan@dufil.com - Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export to a file'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_4" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="9698236f-b9fb-49e0-80fb-eb9f0985bf93" CvTextArea="183, 100, 87, 16" CvTextArgument="Export to a file" CvType="Text" DesignTimeRectangle="182, 99, 308, 17" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'Export to a file'" FullSelectorArgument="&lt;wnd cls='#32770' title='Import and Export Wizard' /&gt;&lt;wnd ctrlid='12016' /&gt;&lt;ctrl name='Choose an action to perform:' role='list' /&gt;&lt;ctrl name='Export to a file' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='#32770' title='Import and Export Wizard' /&gt;&lt;wnd ctrlid='12016' /&gt;&lt;ctrl name='Choose an action to perform:' role='list' /&gt;&lt;ctrl name='Export to a file' role='list item' automationid='' check:text='Export to a file' /&gt;" Guid="aa76b199-d06b-4368-9429-c4b1eb103396" InformativeScreenshot="cfededfc2d15d7d8dc6ea908540ce548.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Import and Export Wizard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_5" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="91ad56a7-6c57-44ee-ba70-cd20fc79876d" CvElementArea="317, 374, 87, 28" CvTextArea="339, 381, 40, 12" CvTextArgument="Next &gt;" CvType="Button" DesignTimeRectangle="317, 374, 88, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' check:text='unchecked' /&gt;" Guid="087b11c8-2f67-452c-9522-cc707bacd366" InformativeScreenshot="a6193014736454770d850692d169071c.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Import and Export Wizard' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="dbbaba54-ad76-4cac-ae1f-e55aab41a027" CvElementArea="317, 374, 87, 28" CvTextArea="339, 381, 40, 12" CvTextArgument="Next &gt;" CvType="Button" DesignTimeRectangle="317, 374, 88, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' check:text='unchecked' /&gt;" Guid="f705bb4d-22f0-4710-aa20-210f990efed8" InformativeScreenshot="b2ce06d816e9eccd2895695bad056e28.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Export to a File' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="457.6,210.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" InScope="[Outlook]" ScopeIdentifier="Outlook" Shortcuts="[d(hk)][k(home)][u(hk)]" Version="V3" />
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'AI Camera Alert'" sap:VirtualizedContainerService.HintSize="457.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="242, -378, 95, 20" DesignTimeScaleFactor="1.25" FriendlyName="'AI Camera Alert'" FullSelectorArgument="&lt;wnd cls='#32770' title='Export to a File' /&gt;&lt;wnd ctrlid='12005' title='Generic1' /&gt;&lt;ctrl name='Select folder to export from:' role='outline' /&gt;&lt;ctrl text='AI Camera Alert' aastate='focusable, selectable' /&gt;" FuzzyAccuracy="0.51" FuzzySelectorArgument="&lt;wnd cls='#32770' title='Export to a File' /&gt;&lt;wnd ctrlid='12005' title='Generic1' /&gt;&lt;ctrl name='Select folder to export from:' role='outline' /&gt;&lt;ctrl text='AI Camera Alert' aastate='focusable, selectable' role='outline item' automationid='' check:text='AI Camera Alert' /&gt;" Guid="93bced04-545c-49fb-a56c-1c72bd622b0c" ImageBase64="" InformativeScreenshot="f66d92abf367ed9ecec169730368555e.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Export to a File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="Element 'AI Camera Alert'" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="242, 102, 95, 20" DesignTimeScaleFactor="1.25" FriendlyName="'AI Camera Alert'" FullSelectorArgument="&lt;wnd cls='#32770' title='Export to a File' /&gt;&lt;wnd ctrlid='12005' title='Generic1' /&gt;&lt;ctrl name='Select folder to export from:' role='outline' /&gt;&lt;ctrl name='AI Camera Alert' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd cls='#32770' title='Export to a File' /&gt;&lt;wnd ctrlid='12005' title='Generic1' /&gt;&lt;ctrl name='Select folder to export from:' role='outline' /&gt;&lt;ctrl name='AI Camera Alert' role='outline item' automationid='' check:text='AI Camera Alert' /&gt;" Guid="e99fb6e9-cbde-4fa7-8e11-dfe22f68f1ce" InformativeScreenshot="288ceafa6a30b7c868f021fe36abd673.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Export to a File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                          </uix:VerifyExecutionOptions.Target>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="457.6,640" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                      <ui:RetryScope.ActivityBody>
+                        <ActivityAction>
+                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="NClick_8" InScope="[Outlook]" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="524d093a-5de9-4c28-80d0-663c304bd6cb" CvElementArea="317, 374, 87, 28" CvTextArea="339, 381, 40, 12" CvTextArgument="Next &gt;" CvType="Button" DesignTimeRectangle="317, 374, 88, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='12324' title='&amp;amp;Next &amp;gt;' check:text='unchecked' /&gt;" Guid="f5e63b54-bad0-4539-94d2-1d8b4540b67e" InformativeScreenshot="b4560ae412709cc2763b0bd445ebbe9c.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Export to a File' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="d2036c66-47f0-4c26-9705-74dc51bb2ac1" CvTextArea="16, 11, 100, 17" CvTextArgument="Export to a File" CvType="Text" DesignTimeRectangle="16, 11, 100, 17" ElementType="Text" FriendlyName="'Export to a File'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:RetryScope.ActivityBody>
+                      <ui:RetryScope.Condition>
+                        <ActivityFunc x:TypeArguments="x:Boolean">
+                          <uix:NCheckState DisplayName="Check App State 'Select Export File'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" InScope="[Outlook]" ScopeIdentifier="Outlook" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 526, 270" DesignTimeScaleFactor="1.25" FriendlyName="'Select Export File'" Guid="332b3473-3aa7-415d-9918-1c58a500d4bf" InformativeScreenshot="9590394ebd6f9e67b627d65a7150e828.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Select Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.FuzzySelectorArgument>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <Literal x:TypeArguments="x:String" Value="" />
+                                  </InArgument>
+                                </uix:TargetAnchorable.FuzzySelectorArgument>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </ActivityFunc>
+                      </ui:RetryScope.Condition>
+                    </ui:RetryScope>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="457.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_9" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="285, 214, 100, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Yes' check:text='unchecked' /&gt;" Guid="381a0bf9-a298-4fc6-bfb7-167a0f59af70" InformativeScreenshot="43f61e4776a1a7f2a559dedaf7302382.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Select Export File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="87, 71, 390, 97" ElementType="Text" FriendlyName="'C:\Users\Enoobong.Akpan…'" FullSelectorArgument="&lt;wnd ctrlid='65535' title='C:\Users\Enoobong.Akpan\OneDrive - Tolaram Pte Ltd\AI Cam Mails.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='65535' title='C:\Users\Enoobong.Akpan\OneDrive - Tolaram Pte Ltd\AI Cam Mails.*' check:text='C:\Users\Enoobong.Akpan\OneDrive - Tolaram Pte Ltd\AI Cam Mails.CSV&amp;#xD;&amp;#xA;This file already exists!&amp;#xD;&amp;#xA;&amp;#xD;' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="457.6,182.4" sap2010:WorkflowViewState.IdRef="NClick_10" InScope="[Outlook]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Outlook" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="317, 374, 88, 28" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='12325' title='Finish' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='12325' title='Finish' check:text='unchecked' /&gt;" Guid="2d396532-e1d2-45c9-9240-a2600d0a6f46" InformativeScreenshot="d8c53984cd7735c71041cf92fd1ef7de.png" ScopeSelectorArgument="&lt;wnd app='outlook.exe' cls='#32770' title='Export to a File' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </umab:OutlookApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </umab:OutlookApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" FilePath="C:\Program Files\Microsoft Office\root\Office16\outlook.exe" IconBase64="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" InformativeScreenshot="74530f0c087b43ae55e3c893f0f8ce11.png" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - Enoobong.Akpan@dufil.com - Outlook' /&gt;" Title="Inbox - Enoobong.Akpan@dufil.com - Outlook" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="Enoobong.Akpan@dufil.com" DisplayName="Use Outlook 365" EmailAddress="Enoobong.Akpan@dufil.com" sap:VirtualizedContainerService.HintSize="1048,352.8" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="False">
+      <umab:ExchangeApplicationCard.ApplicationId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:ExchangeApplicationCard.ApplicationId>
+      <umab:ExchangeApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </umab:ExchangeApplicationCard.Body>
+      <umab:ExchangeApplicationCard.TenantId>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </umab:ExchangeApplicationCard.TenantId>
+    </umab:ExchangeApplicationCard>
+  </Sequence>
+</Activity>
